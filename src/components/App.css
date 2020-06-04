@@ -1,0 +1,17 @@
+.app {
+  color: #ffffff;
+  margin: 30px 20px 60px 20px;
+}
+
+.header {
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.header h1 {
+  margin-bottom: 0px;
+}
+
+.info-text {
+  color: #a5a5a5;
+}

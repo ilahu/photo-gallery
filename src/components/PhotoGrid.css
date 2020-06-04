@@ -1,0 +1,18 @@
+.image-col {
+  padding-left: 0;
+  padding-right: 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.image-col > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: all ease-out 0.2s;
+}
+
+.image-col > img:hover {
+  transform: scale(1.2);
+  filter: brightness(120%);
+}
