@@ -1,26 +1,13 @@
-import { chunk } from "lodash";
 import * as React from "react";
 import { useMemo, useState } from "react";
 import { Col, Grid, Row } from "react-flexbox-grid";
 import Carousel, { Modal, ModalGateway } from "react-images";
+import { getPhotoIndex, getPhotoRows, Photo } from "../services/photo-grid";
 import "./PhotoGrid.css";
 
 interface Props {
   photos: Photo[];
 }
-
-export interface Photo {
-  caption: string;
-  source: {
-    regular: string;
-    thumbnail: string;
-  };
-}
-
-const ROW_COL_COUNT = 3;
-
-const getPhotoIndex = (rowIndex: number, colIndex: number) =>
-  colIndex + rowIndex * ROW_COL_COUNT;
 
 const PhotoGrid: React.FC<Props> = ({ photos }: Props) => {
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
@@ -35,7 +22,7 @@ const PhotoGrid: React.FC<Props> = ({ photos }: Props) => {
     setModalOpen(false);
   };
 
-  const photoRows = useMemo(() => chunk(photos, ROW_COL_COUNT), [photos]);
+  const photoRows = useMemo(() => getPhotoRows(photos), [photos]);
 
   return (
     <div>

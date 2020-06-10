@@ -1,9 +1,10 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import { Col, Grid, Row } from "react-flexbox-grid";
+import { Photo } from "services/photo-grid";
 import { config } from "../config";
 import "./App.css";
-import PhotoGrid, { Photo } from "./PhotoGrid";
+import PhotoGrid from "./PhotoGrid";
 
 const App: React.FC = () => {
   const [photos, setPhotos] = useState<Photo[]>([]);
