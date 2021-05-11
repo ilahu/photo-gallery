@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "homepage": "http://ilahu.github.io/photo-gallery",
   "dependencies": {
-    "lodash": "4.17.19",
+    "lodash": "4.17.21",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-flexbox-grid": "2.1.2",
