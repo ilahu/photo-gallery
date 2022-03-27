@@ -46,7 +46,7 @@
     "node": ">=12.17.0"
   },
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --mode=development",
     "prepublish": "webpack --mode=production",
     "publish": "gh-pages -d build",
     "test": "jest"
